@@ -35,4 +35,3 @@ module.exports = merge(commonConfig, prodConfig);
 
 // `marketing@${domain}/marketing/remoteEntry.js`
 //    We're going to assume that remoteEntry is nested inside a folder called "marketing"
-
