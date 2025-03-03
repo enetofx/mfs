@@ -21,7 +21,6 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
     // This sync is not needed if running standalone, since the Browser URL is already in sync with the Browser History object
     onParentNavigate({ pathname: nextPathname }) {
       const { pathname } = history.location;
-
       if (pathname !== nextPathname) {
         history.push(nextPathname); // Sync History object with browser URL
       }
@@ -31,7 +30,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
 // If we are in development and in isolation, call mount immediately
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#_marketing-dev-root');
+  const devRoot = document.querySelector('#_auth-dev-root');
 
   if (devRoot) {
     // If running standalone, set "Browser History" approach (handle browser URL)
